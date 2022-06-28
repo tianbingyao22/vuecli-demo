@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- http://www.baidu.com?name=zhangsan&age=18&sex=nan#
+    解析出
+    {name: 'zhangsan',age: 18, sex: 'nan' } -->
+    <script>
+        let str='http://www.baidu.com?name=zhangsan&age=18&sex=nan#';
+        const index1=str.indexOf('?');
+        const index2=str.indexOf('#');
+        let newStr=str.slice(index1+1,index2);
+        const arr=newStr.split('&');     
+        let obj={};
+        for(var i=0;i<arr.length;i++){
+            const [key,value]=arr[i].split("=");
+            obj[key]=value;
+        }
+        console.log(obj);
+
+    </script>
+</body>
+</html>
