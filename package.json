@@ -39,5 +39,8 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "main": "index.js",
+  "author": "tianbingyao22 <2242378609@qq.com>",
+  "license": "MIT"
 }
