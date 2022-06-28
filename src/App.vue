@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <h1>{{msg}}</h1>
-    <button @click="clickFn">翻转</button>
+    <input type="text" v-bind:value="val" @input='getVal'>
   </div>
 </template>
 
@@ -10,14 +9,13 @@ export default {
   name: 'App',
   data(){
     return {
-      msg:"Hello Vue",
+      val:"",
     }
   },
   methods:{
-    clickFn(){
-      // 1.将字符串转换成数组,2.翻转数组，3.将数组转换为字符串
-      this.msg=this.msg.split('').reverse().join("");
-    }
+   getVal(e){
+    this.val=e.target.value;
+   }
   }
 }
 </script>
